@@ -580,26 +580,23 @@ input:focus, textarea:focus {
 }
 
 @media (max-width: 900px) {
-    /* Ensures the main container for the header does not wrap its direct children (logo, actions) */
     .header-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: nowrap; /* This is the key fix to prevent wrapping */
+        flex-wrap: nowrap; 
         padding: 0 10px;
         gap: 16px;
     }
 
-    /* Hides the main navigation links on mobile */
     .main-nav {
         display: none;
     }
 
-    /* Ensures the "Download" button and the burger icon stay in a single row */
     .header-actions {
         display: flex;
         align-items: center;
-        flex-shrink: 0; /* Prevents this group from shrinking and wrapping */
+        flex-shrink: 0;
         gap: 8px;
     }
 
@@ -611,7 +608,6 @@ input:focus, textarea:focus {
         display: flex;
     }
 
-    /* Styles for the dropdown menu */
     .main-nav.open {
         display: flex;
         position: absolute;
