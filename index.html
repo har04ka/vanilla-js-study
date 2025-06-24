@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CleanUp — Учет товаров для ухода за полостью рта</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="modal-backdrop" id="modal-backdrop" style="display:none;"></div>
+    <div class="modal" id="download-modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2>Скачать приложение</h2>
+            <p>Выберите нужную версию для вашей платформы.</p>
+            <div class="modal-buttons">
+                <a href="http://176.119.159.137:8000/api/download/file1" class="download-link" aria-label="Скачать для Windows">
+                    <img src="src/windows-icon.svg" alt="Windows" class="download-icon">
+                </a>
+                <a href="http://176.119.159.137:8000/api/download/file2" class="download-link" aria-label="Скачать для Android">
+                    <img src="src/android-icon.svg" alt="Android" class="download-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <img src="src/icon2.svg" alt="logo" class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <nav class="main-nav">
+                <a href="#hero">Главная</a>
+                <a href="#about">О нас</a>
+                <a href="#features">Преимущества</a>
+                <a href="#download">Скачать</a>
+                <a href="http://176.119.159.137:8000/docs" target="_blank">API DOCS</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="cta-button-nav">Скачать</a>
+                <button class="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero-flex">
+                <div class="hero-content">
+                    <h1>CleanUp — учет товаров по уходу за полостью рта</h1>
+                    <p class="hero-sub">Удобно. Быстро. Современно.</p>
+                    <button class="cta-button">Скачать</button>
+                </div>
+                <div class="hero-slider single-image">
+                    <button class="slider-arrow left" aria-label="Предыдущий слайд">&#8592;</button>
+                    <div class="slider-images">
+                        <div class="slider-track">
+                            <img src="https://p1.zoon.ru/preview/d3JJ3XJ0IPU589NPmqcJcg/640x360x85/1/6/4/original_5c07b639a24fd97966566115_5d80be0622825.jpg" alt="Слайд 1" class="slider-img-16-9">
+                            <img src="https://p1.zoon.ru/preview/R3Kgb3035i1dzlC0mqMNzA/630x384x85/3/f/f/original_6628b4d6ec01661f610f7287_667d0b35498465.84620247.jpg" alt="Слайд 2" class="slider-img-16-9">
+                            <img src="https://avatars.mds.yandex.net/get-altay/10233337/2a0000018f97679481d262eda87a21c775eb/L_height" alt="Слайд 3" class="slider-img-16-9">
+                        </div>
+                    </div>
+                    <button class="slider-arrow right" aria-label="Следующий слайд">&#8594;</button>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container">
+                <h2>О нас</h2>
+                <p>CleanUp — это современное приложение, которое помогает вести учет товаров для ухода за полостью рта. Мы заботимся о вашем здоровье и экономим ваше время!</p>
+            </div>
+        </section>
+        <section class="features" id="features">
+            <div class="container">
+                <h2>Преимущества</h2>
+                <div class="features-list">
+                    <div class="feature-card">
+                        <h3>Удобство</h3>
+                        <p>Простой и интуитивный интерфейс для всех пользователей.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Общие данные</h3>
+                        <p>Синхронизация между устройствами разных платформ.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Учет товаров</h3>
+                        <p>Возможность добавлять, удалять и редактировать товары.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="download" id="download">
+            <div class="container">
+                <h2>Скачать приложение</h2>
+                <div class="download-buttons">
+                    <a href="http://176.119.159.137:8000/api/download/file1" class="download-btn win">Скачать для Windows</a>
+                    <a href="http://176.119.159.137:8000/api/download/file2" class="download-btn android">Скачать для Android</a>
+                </div>
+                <p class="download-note">Выберите нужную версию для вашей платформы.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 CleanUp.</p>
+            <p>Сайт сделал Прокопьев Андрей (ИС-931)</p>
+            <div class="socials">
+                <a href="https://t.me/har04ka" target="_blank">Telegram</a>
+                <a href="https://github.com/har04ka" target="_blank">GitHub</a>
+                <a href="https://vk.com/har04ka" target="_blank">VK</a>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
