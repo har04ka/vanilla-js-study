@@ -1,7 +1,6 @@
     console.log('Happy developing ✨')
 
 document.addEventListener('DOMContentLoaded', function() {
-    // --- Модальное окно ---
     const ctaButton = document.querySelector('.cta-button');
     const modal = document.getElementById('download-modal');
     const backdrop = document.getElementById('modal-backdrop');
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Предотвращаем отправку формы контактов (демо)
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Мобильное меню (бургер) ---
     const burger = document.querySelector('.burger');
     const mainNav = document.querySelector('.main-nav');
     if (burger && mainNav) {
@@ -60,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Слайдер ---
     const sliderContainer = document.querySelector('.hero-slider.single-image');
     const sliderTrack = document.querySelector('.slider-track');
     const sliderImages = document.querySelectorAll('.slider-img-16-9');
@@ -86,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
             showSlide(currentSlide);
         });
 
-        // Swipe functionality
         let isMouseDown = false;
         let startX;
         let endX;
@@ -128,10 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
         sliderContainer.addEventListener('touchend', onPointerUp);
     }
     
-    // Включаем анимацию после загрузки страницы
     document.body.classList.add('transitions-ready');
 
-    // --- Scroll reveal для секций ---
     document.querySelectorAll('main > section').forEach(section => {
         section.classList.add('reveal');
     });
@@ -146,14 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
 
-    // --- Анимация кнопок ---
     document.querySelectorAll('.cta-button, .cta-button-nav, .download-link').forEach(btn => {
         btn.addEventListener('mousedown', () => btn.classList.add('bounce'));
         btn.addEventListener('mouseup', () => btn.classList.remove('bounce'));
         btn.addEventListener('mouseleave', () => btn.classList.remove('bounce'));
     });
 
-    // --- Анимация иконок в модальном окне ---
     document.querySelectorAll('.modal .download-link svg').forEach(svg => {
         const parent = svg.closest('.download-link');
         if (parent) {
